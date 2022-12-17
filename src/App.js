@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './assets/img/bani.png';
 import './App.css';
 
 function App() {
