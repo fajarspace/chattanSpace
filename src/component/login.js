@@ -64,7 +64,13 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <Flex bg="gray.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="100vh">
+        <Flex
+          bg="gray.200"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          h="100vh">
           <Alert
             status="error"
             marginBottom={10}
@@ -96,8 +102,7 @@ class Login extends Component {
               size="lg"
               marginTop={5}
             >
-              <Image
-                src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png"
+              <Image src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png"
                 alt="signin-google"
               />
             </Button>
