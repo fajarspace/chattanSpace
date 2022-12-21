@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import { initializeApp } from 'firebase/app';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import registerServiceWorker from './registerServiceWorker';
+import { firebaseConfig } from './config';
+
+initializeApp(firebaseConfig);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

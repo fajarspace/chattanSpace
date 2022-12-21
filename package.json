@@ -1,32 +1,24 @@
 {
-  "name": "chattanSpace",
-  "version": "0.1.0",
+  "name": "react-firebase-chat",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "firebase": "^7.20.0",
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "firebase": "^7.19.1",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
-    "react-chat-engine": "^1.8.10",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "web-vitals": "^1.0.1"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
