@@ -4,6 +4,7 @@ import Message from "./min-component/message";
 import Header from "./min-component/header";
 import UsersList from "./min-component/usersList";
 import { database } from "firebase";
+import "../App.css";
 
 class Home extends Component {
   constructor(props) {
@@ -134,13 +135,13 @@ class Home extends Component {
     return (
       < React.Fragment >
         <Box h="100vh" bg="gray.100">
-          <Flex justifyContent="center">
+          <Flex className="boxs" justifyContent="center">
             <Flex
               width={[
                 "100%",
                 "100%",
                 "100%",
-                "100%"
+                "80%"
               ]}
               flexDirection="column"
               p={[0, 0, 0, 6]}

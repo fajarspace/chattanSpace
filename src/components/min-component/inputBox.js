@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Box, Input, InputGroup, InputRightElement, Button, Text, Grid } from "@chakra-ui/core"
 import { emojis } from "./emoji";
 import { database } from "firebase";
+import "../../App.css";
 
 class InputBox extends Component {
   constructor(props) {
@@ -41,30 +42,22 @@ class InputBox extends Component {
           h="50px"
           shadow="lg"
           borderBottomRightRadius="4px">
-          <form onSubmit={this.sendMessage} style={{ height: "100%" }}>
-            <InputGroup size="md" h="100%">
+          <form onSubmit={this.sendMessage} className="msger-inputarea">
+            <InputGroup size="md" h="100%" className="msger-input">
               <Input
-                h="100%"
-                pr="2rem"
-                type="text"
-                placeholder="Ketik pesan..."
-                variant="filled"
-                borderTop="1px solid teal"
-                bg="white"
-                _focus={{ boxShadow: "none" }}
-                _hover={{ borderTop: "1px solid teal" }}
+
                 onFocus={() => this.setState({ showEmoji: false })}
                 onChange={(e) => { this.setState({ text: e.target.value }) }}
                 value={this.state.text}
               />
               <InputRightElement h="100%">
-                <Button background="none" _hover="none" onClick={this.emojiToggle}>
+                <Button background="none" _hover="none" right="75px" onClick={this.emojiToggle}>
                   <Text fontSize="2xl">☺</Text>
                 </Button>
-                <Button background="none" _hover="none" right="7px" onClick={this.sendMessage}>
-                  <Text fontSize="2xl">✈</Text>
-                </Button>
+
               </InputRightElement>
+              <Button className="msger-send-btn" _hover="none" onClick={this.sendMessage}> <img width="30px" src="./send-message.png" />
+              </Button>
             </InputGroup>
           </form>
         </Box>

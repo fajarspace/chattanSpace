@@ -50,13 +50,14 @@ class Message extends Component {
                         {this.props.usersList.map((user, i) =>
                           (user.uid === conversation.uid)
                             ?
-                            <Avatar
-                              key={i}
-                              src={user.img}
-                              name={conversation.name}
-                              size="sm"
-                              left="5px"
-                            />
+                            <div className="msg-img">
+                              <Avatar
+                                key={i}
+                                src={user.img}
+                                name={conversation.name}
+                                left="5px"
+                              />
+                            </div>
                             :
                             ''
                         )}
@@ -64,26 +65,26 @@ class Message extends Component {
                           <TagLabel whiteSpace="normal" py={2}>
                             <Stack>
                               <p className="p-chat-saya" >{conversation.msg}</p>
-                              <Text color="lightgray.200" fontSize={14}>
-                                - {conversation.name} • {moment(conversation.time).fromNow()}
+                              <Text color="lightgray.500" fontSize={11}>
+                                {moment(conversation.time).fromNow()}
                               </Text>
                             </Stack>
                           </TagLabel>
                         </div>
                       </Stack>
                       :
+
                       <Stack spacing={1} isInline marginBottom={2} w="100%" key={i}>
                         {this.props.usersList.map((user, i) =>
                           (user.uid === conversation.uid)
                             ?
-                            <Avatar
-                              key={i}
-                              src={user.img}
-                              name={conversation.name}
-                              marginRight="0"
-                              marginLeft="0.25rem"
-                              size="sm"
-                            />
+                            <div className="msg-img">
+                              <Avatar
+                                key={i}
+                                src={user.img}
+                                name={conversation.name}
+                              />
+                            </div>
                             :
                             ''
                         )}
@@ -93,11 +94,12 @@ class Message extends Component {
                         <div className="chat-kamu" shadow="sm">
                           <TagLabel whiteSpace="normal" py={2} >
                             <Stack>
+                              <p style={{ "fontWeight": "bold" }}>{conversation.name} </p>
                               <p className="p-chat-kamu" >
                                 {conversation.msg}
                               </p>
                               <Text color="gray.500" fontSize={11}>
-                                - {conversation.name} • {moment(conversation.time).fromNow()}
+                                {moment(conversation.time).fromNow()}
                               </Text>
                             </Stack>
                           </TagLabel>
