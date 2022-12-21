@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import CustomTheme from "./theme";
-import Login from "./component/login";
-import Home from "./component/Home";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import "./App.css";
 import {
   BrowserRouter as Router,
   Switch,
