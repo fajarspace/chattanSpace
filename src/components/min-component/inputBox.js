@@ -69,7 +69,7 @@ class InputBox extends Component {
                 </Button>
 
               </InputRightElement>
-              <Button className="msger-send-btn" _hover="none" onClick={this.sendMessage}> <img width="30px" src="./send-message.png" />
+              <Button className="msger-send-btn" _hover="none" onClick={this.sendMessage}> Kirim
               </Button>
             </InputGroup>
           </form>
