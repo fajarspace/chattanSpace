@@ -158,6 +158,7 @@ class Home extends Component {
                   selectUser={this.selectUser}
                   getMessageFromRoom={this.getMessageFromRoom}
                   loadingData={this.state.loadingData}
+                  messages={this.state.messages}
                 />
                 <Message
                   userId={this.state.userId}

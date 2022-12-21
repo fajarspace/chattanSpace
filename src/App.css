@@ -6,11 +6,11 @@
 
 body {
   background-image: var(--body-bg);
-  font-family: Helvetica, sans-serif;
 }
 
-.boxs {
-  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+.msger-header-title {
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .header {
@@ -27,7 +27,7 @@ body {
 }
 
 .p-chat-saya {
-  font-size: 15px;
+  font-size: 18px;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
@@ -43,7 +43,7 @@ body {
 }
 
 .p-chat-kamu {
-  font-size: 15px;
+  font-size: 18px;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;

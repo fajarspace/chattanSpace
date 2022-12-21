@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import moment from 'moment'
-import { Box, Flex, Avatar, Tag, TagLabel, Text, Stack, Skeleton } from "@chakra-ui/core"
+import { Box, Flex, Avatar, TagLabel, Text, Stack, Skeleton } from "@chakra-ui/core"
 import InputBox from "./inputBox";
 import "../../App.css";
 
@@ -64,7 +64,9 @@ class Message extends Component {
                         <div className="chat-saya" variantColor="blue" shadow="sm">
                           <TagLabel whiteSpace="normal" py={2}>
                             <Stack>
-                              <p className="p-chat-saya" >{conversation.msg}</p>
+                              <p className="p-chat-saya" >
+                                {conversation.msg}
+                              </p>
                               <Text color="lightgray.500" fontSize={11}>
                                 {moment(conversation.time).fromNow()}
                               </Text>

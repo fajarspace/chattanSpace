@@ -3,6 +3,19 @@ import { Box, Input, InputGroup, InputRightElement, Button, Text, Grid } from "@
 import { emojis } from "./emoji";
 import { database } from "firebase";
 import "../../App.css";
+// import CryptoJS from 'crypto-js';
+
+// // Generate OTP key
+// const key = CryptoJS.lib.WordArray.random(16); // Generate 16-byte OTP key
+
+// // Encrypt message
+// const message = 'Hello, world!';
+// const encryptedMessage = CryptoJS.AES.encrypt(message, key);
+
+// // Decrypt message
+// const decryptedMessage = CryptoJS.AES.decrypt(encryptedMessage, key);
+
+// console.log(decryptedMessage.toString(CryptoJS.enc.Utf8)); // Output: "Hello, world!"
 
 class InputBox extends Component {
   constructor(props) {

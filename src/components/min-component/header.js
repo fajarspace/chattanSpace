@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Box, Flex, Avatar, Button, Text, Stack, Menu, MenuButton, MenuList, MenuItem, Image } from "@chakra-ui/core"
+import { Box, Flex, Avatar, Button, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core"
 import "../../App.css";
 
 
@@ -12,11 +12,11 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Flex borderBottom="1px solid gray" bg="#EEEEEE" roundedTop="md">
+        <Flex borderBottom="" bg="white" roundedTop="md">
           <Box w="100%" p={4}>
 
             <div class="msger-header-title">
-              <i class="fas fa-comment-alt"></i> Chattan dot space
+              <i class="fas fa-comment-alt"></i> Chattan .space
             </div>
 
           </Box>
