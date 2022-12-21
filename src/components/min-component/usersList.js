@@ -52,17 +52,18 @@ class UsersList extends Component {
                 <ListItem p={1} onClick={() => this.selectUser("chatRoom")}>
                   <Tag
                     w="100%"
+                    h="56px"
                     shadow="md"
-                    variantColor={this.state.activeItem === "chatRoom" ? "red" : "orange"}
-                    roundedRight="md"
-                    roundedLeft="full"
+                    variantColor={this.state.activeItem === "chatRoom" ? "red" : "gray"}
+                    // roundedRight="md"
+                    // roundedLeft="full"
                     cursor="pointer"
                     position="relative"
                   >
                     <Avatar
                       size="md"
-                      ml={-2}
-                      mr={2}
+                      ml={-1}
+                      mr={1}
                     />
                     <TagLabel>Grup semua orang</TagLabel>
                     <Spinner
@@ -78,10 +79,11 @@ class UsersList extends Component {
                     <ListItem p={1} key={user.uid} onClick={() => this.selectUser(user)}>
                       <Tag
                         w="100%"
+                        h="56px"
                         shadow="md"
-                        variantColor={this.state.activeItem === user.uid ? "red" : "orange"}
-                        roundedRight="md"
-                        roundedLeft="full"
+                        variantColor={this.state.activeItem === user.uid ? "red" : "gray"}
+                        // roundedRight="md"
+                        // roundedLeft="full"
                         cursor="pointer"
                         position="relative"
                       >
@@ -89,8 +91,8 @@ class UsersList extends Component {
                           src={user.img}
                           size="md"
                           name={user.name}
-                          ml={-2}
-                          mr={2}
+                          ml={-1}
+                          mr={1}
                         />
                         <TagLabel>{user.name}</TagLabel>
                         <Spinner

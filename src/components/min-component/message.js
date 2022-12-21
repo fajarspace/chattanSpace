@@ -53,14 +53,15 @@ class Message extends Component {
                               src={user.img}
                               name={conversation.name}
                               size="sm"
+                              left="5px"
                             />
                             :
                             ''
                         )}
-                        <Tag variantColor="cyan" shadow="sm">
+                        <Tag variantColor="white" shadow="sm">
                           <TagLabel whiteSpace="normal" py={2}>
                             <Stack>
-                              <Text>{conversation.msg}</Text>
+                              <p>{conversation.msg}</p>
                               <Text color="gray.500" fontSize={11}>
                                 - {conversation.name} • {moment(conversation.time).fromNow()}
                               </Text>

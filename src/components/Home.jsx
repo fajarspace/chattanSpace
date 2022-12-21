@@ -140,7 +140,7 @@ class Home extends Component {
                 "100%",
                 "100%",
                 "100%",
-                "65%"
+                "100%"
               ]}
               flexDirection="column"
               p={[0, 0, 0, 6]}
