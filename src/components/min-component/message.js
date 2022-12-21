@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import moment from 'moment'
 import { Box, Flex, Avatar, Tag, TagLabel, Text, Stack, Skeleton } from "@chakra-ui/core"
 import InputBox from "./inputBox";
+import "../../App.css";
 
 
 class Message extends Component {
@@ -28,8 +29,9 @@ class Message extends Component {
           h="80vh"
           shadow="lg"
           roundedBottomRight="md"
-          bg="gray.200"
+          className="box-chat"
         >
+
           <Flex h="100%" position="relative">
             <Flex
               flexDirection="column"
@@ -58,16 +60,16 @@ class Message extends Component {
                             :
                             ''
                         )}
-                        <Tag variantColor="white" shadow="sm">
+                        <div className="chat-saya" variantColor="blue" shadow="sm">
                           <TagLabel whiteSpace="normal" py={2}>
                             <Stack>
-                              <p>{conversation.msg}</p>
-                              <Text color="gray.500" fontSize={11}>
+                              <p className="p-chat-saya" >{conversation.msg}</p>
+                              <Text color="lightgray.200" fontSize={14}>
                                 - {conversation.name} • {moment(conversation.time).fromNow()}
                               </Text>
                             </Stack>
                           </TagLabel>
-                        </Tag>
+                        </div>
                       </Stack>
                       :
                       <Stack spacing={1} isInline marginBottom={2} w="100%" key={i}>
@@ -85,18 +87,21 @@ class Message extends Component {
                             :
                             ''
                         )}
-                        <Tag variantColor="black" shadow="sm">
+
+                        <br />
+
+                        <div className="chat-kamu" shadow="sm">
                           <TagLabel whiteSpace="normal" py={2} >
                             <Stack>
-                              <Text>
+                              <p className="p-chat-kamu" >
                                 {conversation.msg}
-                              </Text>
+                              </p>
                               <Text color="gray.500" fontSize={11}>
                                 - {conversation.name} • {moment(conversation.time).fromNow()}
                               </Text>
                             </Stack>
                           </TagLabel>
-                        </Tag>
+                        </div>
                       </Stack>
                   ))
                   :
@@ -123,7 +128,7 @@ class Message extends Component {
             }
           </Flex>
         </Box>
-      </React.Fragment>
+      </React.Fragment >
     )
   }
 }
